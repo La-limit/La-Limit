@@ -79,6 +79,7 @@
       letter-spacing: 1px;
     }
 
+
     .nav-links {
       display: flex;
       gap: 20px;
@@ -377,6 +378,14 @@
       color: var(--white);
     }
 
+    .contact-section .section-title {
+      color: var(--white);
+    }
+
+    .contact-section .section-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
     .contact-container {
       display: flex;
       flex-wrap: wrap;
@@ -432,6 +441,23 @@
       background: var(--secondary);
       color: var(--dark);
       transform: translateY(-3px);
+    }
+
+    /* Icon Animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .animated-icon {
+      animation: pulse 2s infinite;
     }
 
     .form-container {
@@ -582,6 +608,18 @@
       .section-title {
         font-size: 2.2rem;
       }
+      
+      .floating-logo {
+        top: 80px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+      }
+      
+      .floating-logo img {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -623,6 +661,12 @@
       .contact-info, .form-container {
         width: 100%;
       }
+      
+      .floating-logo {
+        top: auto;
+        bottom: 80px;
+        right: 10px;
+      }
     }
 
     @media (max-width: 576px) {
@@ -650,6 +694,16 @@
         padding: 12px 25px;
         font-size: 0.9rem;
       }
+      
+      .floating-logo {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .floating-logo img {
+        width: 40px;
+        height: 40px;
+      }
     }
   </style>
 </head>
@@ -658,7 +712,7 @@
     <div class="container">
       <div class="header-inner">
         <div class="logo">
-          <img src="/api/placeholder/60/60" alt="La Limit Logo" class="logo-img">
+         <img src="omar/logo.jpg" alt="La Limit Logo" class="logo-image">
           <div class="logo-text">LA LiMiT</div>
         </div>
         <nav class="nav-links" id="navLinks">
@@ -674,6 +728,11 @@
       </div>
     </div>
   </header>
+
+  <!-- Floating Logo -->
+  <div class="floating-logo">
+    <img src="/omar/logo.jpg" alt="La Limit Logo">
+  </div>
 
   <section class="hero" id="hero">
     <div class="container">
@@ -704,7 +763,7 @@
       <div class="vm-container">
         <div class="vm-card animate">
           <div class="vm-icon">
-            <i class="fas fa-eye"></i>
+            <i class="fas fa-eye animated-icon"></i>
           </div>
           <h3>رؤيتنا</h3>
           <blockquote>
@@ -713,7 +772,7 @@
         </div>
         <div class="vm-card animate">
           <div class="vm-icon">
-            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket animated-icon"></i>
           </div>
           <h3>رسالتنا</h3>
           <p>توفير خدمات تسويقية متكاملة تجمع بين الفكر الاستراتيجي، والإبداع التقني، والابتكار المستمر، لمساعدة عملائنا على تحقيق النمو، وتعزيز حضورهم في السوق، وبناء علاقات طويلة الأمد مع جمهورهم.</p>
@@ -728,22 +787,22 @@
       <div class="section-subtitle">المبادئ التي تقود أعمالنا وتميز أداءنا</div>
       <div class="values-grid">
         <div class="value-card animate">
-          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-check-circle animated-icon"></i>
           <h3>الالتزام</h3>
           <p>نلتزم بأعلى المعايير في جودة العمل واحترام الوقت لتحقيق رضا عملائنا.</p>
         </div>
         <div class="value-card animate">
-          <i class="fas fa-lightbulb"></i>
+          <i class="fas fa-lightbulb animated-icon"></i>
           <h3>الابتكار</h3>
           <p>نبحث دائمًا عن أفكار جديدة وحلول غير تقليدية تميّز علامات عملائنا التجارية.</p>
         </div>
         <div class="value-card animate">
-          <i class="fas fa-chart-line"></i>
+          <i class="fas fa-chart-line animated-icon"></i>
           <h3>التطور</h3>
           <p>نؤمن أن التعلم المستمر هو مفتاح النجاح في عالم سريع التغير لذا نواكب كل جديد.</p>
         </div>
         <div class="value-card animate">
-          <i class="fas fa-users"></i>
+          <i class="fas fa-users animated-icon"></i>
           <h3>التعاون</h3>
           <p>نؤمن بقوة العمل الجماعي وأهمية بناء شراكات طويلة الأمد مع عملائنا.</p>
         </div>
@@ -758,7 +817,7 @@
       <div class="services-list">
         <div class="service-card animate">
           <div class="service-icon">
-            <i class="fas fa-clipboard-list"></i>
+            <i class="fas fa-clipboard-list animated-icon"></i>
           </div>
           <div class="service-content">
             <h3>التخطيط والاستشارات</h3>
@@ -767,7 +826,7 @@
         </div>
         <div class="service-card animate">
           <div class="service-icon">
-            <i class="fas fa-bullhorn"></i>
+            <i class="fas fa-bullhorn animated-icon"></i>
           </div>
           <div class="service-content">
             <h3>التسويق الرقمي</h3>
@@ -776,7 +835,7 @@
         </div>
         <div class="service-card animate">
           <div class="service-icon">
-            <i class="fas fa-paint-brush"></i>
+            <i class="fas fa-paint-brush animated-icon"></i>
           </div>
           <div class="service-content">
             <h3>الإبداع والتصميم</h3>
@@ -785,14 +844,14 @@
         </div>
         <div class="service-card animate">
           <div class="service-icon">
-            <i class="fas fa-cogs"></i>
+            <i class="fas fa-cogs animated-icon"></i>
           </div>
           <div class="service-content">
             <h3>التسويق التقليدي</h3>
             <p>الإعلانات الخارجية، المطبوعات، التسويق الميداني، وتنظيم الفعاليات والمعارض وإدارتها بكفاءة.</p>
           </div>
         </div>
-        <div class="service-card animate">
+      <div class="service-card animate">
           <div class="service-icon">
             <i class="fas fa-robot"></i>
           </div>
